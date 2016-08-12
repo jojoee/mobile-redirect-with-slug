@@ -22,7 +22,7 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die;
+  die;
 }
 
 /**
@@ -30,8 +30,8 @@ if ( ! defined( 'WPINC' ) ) {
  * This action is documented in includes/mrws-activator.php
  */
 function activate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/mrws-activator.php';
-	MRWS_Activator::activate();
+  require_once plugin_dir_path( __FILE__ ) . 'includes/mrws-activator.php';
+  MRWS_Activator::activate();
 }
 
 /**
@@ -39,8 +39,8 @@ function activate_plugin_name() {
  * This action is documented in includes/mrws-deactivator.php
  */
 function deactivate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/mrws-deactivator.php';
-	MRWS_Deactivator::deactivate();
+  require_once plugin_dir_path( __FILE__ ) . 'includes/mrws-deactivator.php';
+  MRWS_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_plugin_name' );
@@ -63,8 +63,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/mrws.php';
  */
 function run_plugin_name() {
 
-	$plugin = new MRWS();
-	$plugin->run();
+  $plugin = new MRWS();
+  $plugin->run();
 
 }
 run_plugin_name();

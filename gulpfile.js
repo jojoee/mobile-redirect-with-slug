@@ -1,17 +1,17 @@
 var gulp = require('gulp'),
-	connect = require('gulp-connect-php'),
-	browserSync = require('browser-sync');
+  connect = require('gulp-connect-php'),
+  browserSync = require('browser-sync');
 
 gulp.task('connect-sync', function() {
-	connect.server({}, function() {
-		browserSync({
-			proxy: 'wp12.dev'
-		});
-	});
+  connect.server({}, function() {
+    browserSync({
+      proxy: 'wp12.dev'
+    });
+  });
 
-	gulp.watch('**/*.php').on('change', function() {
-		browserSync.reload();
-	});
+  gulp.watch('**/*.php').on('change', function() {
+    browserSync.reload();
+  });
 });
 
 gulp.task('default', ['connect-sync']);
