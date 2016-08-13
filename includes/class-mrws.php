@@ -94,10 +94,12 @@ class MRWS {
    */
   private function load_dependencies() {
     // load
+    // - common
     // - actions & filters
     // - i18n
     // - admin
     // - public
+    require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mrws-common.php';
     require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mrws-loader.php';
     // require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mrws-i18n.php';
     require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-mrws-admin.php';
