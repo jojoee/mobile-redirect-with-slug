@@ -26,6 +26,24 @@ class MRWS_Common {
   protected $option_group_name;
   protected $option_field_name;
 
+  public function __construct() {
+    $this->is_debug = false;
+    $this->is_debug = true;
+    $this->text_domain = 'mrws'; // unused
+    $this->menu_page = 'mobile-redirect-with-slug';
+    $this->option_group_name = 'mrws_option_group';
+    $this->option_field_name = 'mrws_option_field';
+
+    // set class property
+    $this->options = get_option( $this->option_field_name );
+
+    // set default prop
+    // for only
+    // - first time or
+    // - no summiting form
+    $this->mrws_set_default_prop();
+  }
+
   /*================================================================ Debug
   */
 
@@ -155,22 +173,4 @@ class MRWS_Common {
 
   /*================================================================ Public
   */
-
-  public function __construct() {
-    $this->is_debug = false;
-    $this->is_debug = true;
-    $this->text_domain = 'mrws'; // unused
-    $this->menu_page = 'mobile-redirect-with-slug';
-    $this->option_group_name = 'mrws_option_group';
-    $this->option_field_name = 'mrws_option_field';
-
-    // set class property
-    $this->options = get_option( $this->option_field_name );
-
-    // set default prop
-    // for only
-    // - first time or
-    // - no summiting form
-    $this->mrws_set_default_prop();
-  }
 }
