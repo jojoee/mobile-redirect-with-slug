@@ -28,7 +28,7 @@ class MRWS_Common {
 
   public function __construct() {
     $this->is_debug = false;
-    $this->is_debug = true;
+    // $this->is_debug = true;
     $this->text_domain = 'mrws'; // unused
     $this->menu_page = 'mobile-redirect-with-slug';
     $this->option_group_name = 'mrws_option_group';
