@@ -38,4 +38,10 @@ intermediate
 .idea
 cache
 bk
+
+# Dependencies
 node_modules
+vendors
+
+# Other notes
+README-others.md

@@ -48,7 +48,6 @@ class MRWS_Admin {
    * @param    string    $version        The version of this plugin.
    */
   public function __construct( $plugin_name, $version ) {
-
     $this->plugin_name = $plugin_name;
     $this->version = $version;
   }
@@ -59,7 +58,7 @@ class MRWS_Admin {
    * @since    1.0.0
    */
   public function enqueue_styles() {
-
+    
     /**
      * This function is provided for demonstration purposes only.
      *
@@ -71,9 +70,13 @@ class MRWS_Admin {
      * between the defined hooks and the functions defined in this
      * class.
      */
-
-    wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/mrws-admin.css', array(), $this->version, 'all' );
-
+    wp_enqueue_style(
+      $this->plugin_name,
+      plugin_dir_url( __FILE__ ) . 'css/mrws-admin.css',
+      array(),
+      $this->version,
+      'all'
+    );
   }
 
   /**
@@ -94,9 +97,12 @@ class MRWS_Admin {
      * between the defined hooks and the functions defined in this
      * class.
      */
-
-    wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/mrws-admin.js', array( 'jquery' ), $this->version, false );
-
+    wp_enqueue_script(
+      $this->plugin_name,
+      plugin_dir_url( __FILE__ ) . 'js/mrws-admin.js',
+      array( 'jquery' ),
+      $this->version,
+      false
+    );
   }
-
 }

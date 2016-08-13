@@ -71,7 +71,7 @@ class MRWS {
     $this->version = '1.0.0';
 
     $this->load_dependencies();
-    $this->set_locale();
+    // $this->set_locale();
     $this->define_admin_hooks();
     $this->define_public_hooks();
   }
@@ -93,27 +93,14 @@ class MRWS {
    * @access   private
    */
   private function load_dependencies() {
-    /**
-     * The class responsible for orchestrating the actions and filters of the
-     * core plugin.
-     */
+    // load
+    // - actions & filters
+    // - i18n
+    // - admin
+    // - public
     require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mrws-loader.php';
-
-    /**
-     * The class responsible for defining internationalization functionality
-     * of the plugin.
-     */
-    require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mrws-i18n.php';
-
-    /**
-     * The class responsible for defining all actions that occur in the admin area.
-     */
+    // require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mrws-i18n.php';
     require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-mrws-admin.php';
-
-    /**
-     * The class responsible for defining all actions that occur in the public-facing
-     * side of the site.
-     */
     require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-mrws-public.php';
 
     $this->loader = new MRWS_Loader();
@@ -144,8 +131,9 @@ class MRWS {
   private function define_admin_hooks() {
     $plugin_admin = new MRWS_Admin( $this->get_plugin_name(), $this->get_version() );
 
-    $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-    $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+    // unused
+    // $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
+    // $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
   }
 
   /**
@@ -158,8 +146,9 @@ class MRWS {
   private function define_public_hooks() {
     $plugin_public = new MRWS_Public( $this->get_plugin_name(), $this->get_version() );
 
-    $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-    $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+    // unused
+    // $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
+    // $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
   }
 
   /**

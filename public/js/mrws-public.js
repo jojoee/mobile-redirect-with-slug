@@ -1,4 +1,4 @@
-(function( $ ) {
+(function($) {
   'use strict';
 
   /**
@@ -17,7 +17,7 @@
    *
    * When the window is loaded:
    *
-   * $( window ).load(function() {
+   * $(window).load(function() {
    *
    * });
    *
@@ -29,4 +29,4 @@
    * practising this, we should strive to set a better example in our own work.
    */
 
-})( jQuery );
+})(jQuery);

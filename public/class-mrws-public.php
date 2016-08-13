@@ -48,10 +48,8 @@ class MRWS_Public {
    * @param    string    $version      The version of this plugin.
    */
   public function __construct( $plugin_name, $version ) {
-
     $this->plugin_name = $plugin_name;
     $this->version = $version;
-
   }
 
   /**
@@ -72,9 +70,13 @@ class MRWS_Public {
      * between the defined hooks and the functions defined in this
      * class.
      */
-
-    wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/mrws-public.css', array(), $this->version, 'all' );
-
+    wp_enqueue_style(
+      $this->plugin_name,
+      plugin_dir_url( __FILE__ ) . 'css/mrws-public.css',
+      array(),
+      $this->version,
+      'all'
+    );
   }
 
   /**
@@ -95,9 +97,12 @@ class MRWS_Public {
      * between the defined hooks and the functions defined in this
      * class.
      */
-
-    wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/mrws-public.js', array( 'jquery' ), $this->version, false );
-
+    wp_enqueue_script(
+      $this->plugin_name,
+      plugin_dir_url( __FILE__ ) . 'js/mrws-public.js',
+      array( 'jquery' ),
+      $this->version,
+      false
+    );
   }
-
 }
