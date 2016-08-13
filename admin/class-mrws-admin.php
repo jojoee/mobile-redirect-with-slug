@@ -55,6 +55,9 @@ class MRWS_Admin extends MRWS_Common {
 
     add_action( 'admin_menu', array( $this, 'mrws_add_menu' ) );
     add_action( 'admin_init', array( $this, 'mrws_page_init' ) );
+
+    // add plugin link
+    add_filter( 'plugin_action_links', array( $this, 'mrws_plugin_action_links' ), 10, 4 );
   }
 
   /*================================================================ Enqueue
@@ -234,17 +237,16 @@ class MRWS_Admin extends MRWS_Common {
       $this->menu_page,
       $section_id
     );
-
-    // add plugin link
-    add_filter( 'plugin_action_links_'. plugin_basename( __FILE__ ), array( $this, 'plugin_action_links' ), 10, 4 );
   }
 
-  public function plugin_action_links( $actions, $plugin_file, $plugin_data, $context ) {
-    if ( is_plugin_active( $plugin_file ) ) {
-      $actions[] = '<a href="' . admin_url( 'options-general.php?page=mobile-redirect-with-slug' ) . '">Settings</a>';
+  public function mrws_plugin_action_links( $links, $plugin_file ) {
+    $plugin_link = [];
+
+    if ( $plugin_file == MRWS_BASE_FILE ) {
+      $plugin_link[] = '<a href="' . admin_url( 'options-general.php?page=mobile-redirect-with-slug' ) . '">Settings</a>';
     }
 
-    return $actions;
+    return array_merge( $links, $plugin_link );
   }
 
   /**

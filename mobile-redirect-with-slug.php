@@ -1,5 +1,7 @@
 <?php
 
+define( 'MRWS_BASE_FILE', plugin_basename( __FILE__ ) );
+
 /**
  * mobile-redirect-with-slug
  *
