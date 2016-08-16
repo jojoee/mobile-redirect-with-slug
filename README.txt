@@ -16,6 +16,7 @@ Redirect to mobile site (with or without slug url)
 Simple plugin that allows you to redirect mobile's user to mobile site (with or without slug url)
 
 For example, it redirects
+
 * `desktop.com/` to `mobile.com/`
 * `desktop.com/first/` to `mobile.com/first/`
 * `desktop.com/second-post/` to `mobile.com/second-post/`
