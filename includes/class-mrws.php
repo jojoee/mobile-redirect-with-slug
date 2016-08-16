@@ -68,7 +68,7 @@ class MRWS {
    */
   public function __construct() {
     $this->plugin_name = 'mobile-redirect-with-slug';
-    $this->version = '1.0.0';
+    $this->version = ''; // unused
 
     $this->load_dependencies();
     // $this->set_locale();

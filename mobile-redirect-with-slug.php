@@ -13,7 +13,7 @@ define( 'MRWS_BASE_FILE', plugin_basename( __FILE__ ) );
  * Plugin Name:       Mobile Redirect With Slug
  * Plugin URI:        https://github.com/jojoee/mobile-redirect-with-slug
  * Description:       Redriect to mobile site with slug
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Nathachai Thongniran
  * Author URI:        http://jojoee.com/
  * License:           GPL-2.0+
