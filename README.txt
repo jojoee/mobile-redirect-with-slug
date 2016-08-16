@@ -15,6 +15,11 @@ Redirect to mobile site (with or without slug url)
 
 Simple plugin that allows you to redirect mobile's user to mobile site (with or without slug url)
 
+For example, it redirects
+* `desktop.com/` to `mobile.com/`
+* `desktop.com/first/` to `mobile.com/first/`
+* `desktop.com/second-post/` to `mobile.com/second-post/`
+
 == Installation ==
 
 1. Install the plugin via plugin's dashboard or download and upload this plugin into `wp-content/plugins` directory
@@ -38,10 +43,8 @@ Detect `mobile` by using `wp_is_mobile` function then redirect it
 
 == Changelog ==
 
-= 1.0.0 (13 Aug 2016) =
-* First release
-
-== Upgrade Notice ==
+= 1.0.1 (16 Aug 2016) =
+* Update meta
 
 = 1.0.0 (13 Aug 2016) =
 * First release
