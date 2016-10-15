@@ -1,6 +1,6 @@
 {
   "name": "mobile-redirect-with-slug",
-  "description": "=== Plugin Name === Contributors: (this should be a list of wordpress.org userid's) Donate link: http://example.com/ Tags: comments, spam Requires at least: 3.0.1 Tested up to: 3.4 Stable tag: 4.3 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "description": "Redriect to mobile site with slug",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,8 @@
     "type": "git",
     "url": "git+https://jojoee@github.com/jojoee/mobile-redirect-with-slug.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Nathachai Thongniran <inid3a@gmail.com>",
+  "license": "GPL-2.0+",
   "bugs": {
     "url": "https://github.com/jojoee/mobile-redirect-with-slug/issues"
   },
